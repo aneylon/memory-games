@@ -1,0 +1,12 @@
+{
+  "name": "memory-games",
+  "version": "0.0.1",
+  "description": "Games to exercise your memory",
+  "main": "./server/index.js",
+  "repository": "https://github.com/aneylon/memory-games.git",
+  "author": "Arlen Neylon <arlen.m.neylon@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
