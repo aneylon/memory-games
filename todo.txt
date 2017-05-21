@@ -1,0 +1,26 @@
+games
+  ~ n numbers in a row
+  last n numbers in sequence of length n
+  color v word
+  color, animal, place
+
+x POC - Vanilla JS
+
+Style - framework?
+
+React
+  ? Redux
+  Router
+  ? Form
+  + save data
+  + user
+    + add
+    + login
+    + modify
+      + password
+  + save data to server / user acct
+  + view data on dashboard
+
+tests
+ci
+heroku / aws
