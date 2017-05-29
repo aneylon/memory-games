@@ -24,3 +24,5 @@ React
 tests
 ci
 heroku / aws
+
+favicon
