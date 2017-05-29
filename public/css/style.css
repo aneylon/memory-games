@@ -1,6 +1,17 @@
-* {
-  color: red;
+nav {
+  width: 23%;
+}
+
+#content {
+  margin-left: 25%;
+}
+
+.game-container {
+  height: 500px;
   text-align: center;
-  padding: 5px;
-  margin: 5px;
+}
+
+.game-container * {
+  padding: 7px;
+  margin: 7px;
 }
