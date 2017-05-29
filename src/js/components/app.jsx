@@ -11,28 +11,48 @@ import LastNumbers from './lastNumbers'
 import ColorVWord from './colorVWord'
 import ColorAnimalPlace from './colorAnimalPlace'
 
-const App = () => (
-  <Router>
-    <div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/numbersInARow">Numbers In A Row</Link></li>
-        <li><Link to="/lastNumbers">Last Numbers</Link></li>
-        <li><Link to="/colorVWord">Color vs Word</Link></li>
-        <li><Link to="/colorAnimalPlace">ColorAnimalPlace</Link></li>
-        <li><Link to="/about">About</Link></li>
-      </ul>
+class App extends React.Component {
 
-      <hr />
+  openSideBar() {
+    document.getElementById("mySidebar").style.display = "block";
+  }
 
-      <Route exact path="/" component={Home} />
-      <Route path="/numbersInARow" component={NumbersInARow} />
-      <Route path="/lastNumbers" component={LastNumbers} />
-      <Route path="/colorVWord" component={ColorVWord} />
-      <Route path="/colorAnimalPlace" component={ColorAnimalPlace} />
-      <Route path="/about" component={About} />
-    </div>
-  </Router>
-)
+  closeSideBar() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+  render () {
+    return (
+      <Router>
+        <div>
+          <nav>
+            <button className="w3-button w3-xlarge w3-hide-large" onClick={this.openSideBar}>&#9776;</button>
+            <div className="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-blue" id="mySidebar">
+              <button className="w3-bar-item w3-button w3-hide-large" onClick={this.closeSideBar}>Close &times;</button>
+              <Link to="/" className="w3-bar-item w3-button">Home</Link>
+              <Link to="/numbersInARow" className="w3-bar-item w3-button">Numbers In A Row</Link>
+              <Link to="/lastNumbers" className="w3-bar-item w3-button">Last Numbers</Link>
+              <Link to="/colorVWord" className="w3-bar-item w3-button">Color vs Word</Link>
+              <Link to="/colorAnimalPlace" className="w3-bar-item w3-button">ColorAnimalPlace</Link>
+              <Link to="/about" className="w3-bar-item w3-button">About</Link>
+            </div>
+          </nav>
+
+          <section id="content">
+            <Route exact path="/" component={Home} />
+            <Route path="/numbersInARow" component={NumbersInARow} />
+            <Route path="/lastNumbers" component={LastNumbers} />
+            <Route path="/colorVWord" component={ColorVWord} />
+            <Route path="/colorAnimalPlace" component={ColorAnimalPlace} />
+            <Route path="/about" component={About} />
+          </section>
+
+        </div>
+      </Router>
+    )
+  }
+
+}
+
 
 export default App
