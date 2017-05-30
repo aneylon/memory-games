@@ -38,7 +38,7 @@ class NumbersInARow extends Component {
             if (this.state.curMaxLength < this.state.totalMaxLength) {
               this.state.curMaxLength += this.getRandomNumber(1)
             }
-            numbersEl.innerHTML = 'Please enter your answer.'
+            numbersEl.innerHTML = 'Enter your answer.'
             this.state.status = 'asking'
           }
           break
@@ -94,7 +94,7 @@ class NumbersInARow extends Component {
   render () {
     return (
       <div className="w3-display-container game-container">
-        <div className="w3-display-middle w3-card-2 w3-white">
+        <div className="w3-display-middle w3-card-2 w3-white w3-padding-16">
           <h1>Numbers in a Row</h1>
           <hr />
           <h2 className="w3-light-grey" id="numbers">Click Start</h2>
@@ -109,7 +109,7 @@ class NumbersInARow extends Component {
             className="w3-btn w3-blue"
             onClick={this.startStop}
             id="startStopButton">Start</button>
-          <div id="results"></div>
+          {/*<div id="results"></div>*/}
         </div>
       </div>
     )
