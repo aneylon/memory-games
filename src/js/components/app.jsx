@@ -27,7 +27,8 @@ class App extends React.Component {
         <div>
           <nav>
             <button className="w3-button w3-xlarge w3-hide-large" onClick={this.openSideBar}>&#9776;</button>
-            <div className="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-blue" id="mySidebar">
+            <div className="w3-large w3-card-2 w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-blue" id="mySidebar">
+              <span className="w3-bar-item w3-padding-24 w3-dark-grey">Memory Games</span>
               <button className="w3-bar-item w3-button w3-hide-large" onClick={this.closeSideBar}>Close &times;</button>
               <Link to="/" className="w3-bar-item w3-button">Home</Link>
               <Link to="/numbersInARow" className="w3-bar-item w3-button">Numbers In A Row</Link>
