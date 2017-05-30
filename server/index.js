@@ -11,8 +11,8 @@ if(process.env.MODE === 'dev'){
 }
 
 app.get('*', (req, res) => {
-  // res.sendFile(path.resolve(__dirname, '../public/index.html'))
-  res.redirect('/')
+  res.sendFile(path.resolve(__dirname, '../public/index.html'))
+  // res.redirect('/')
 })
 
 app.listen(port, () => {

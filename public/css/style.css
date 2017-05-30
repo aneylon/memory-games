@@ -1,9 +1,12 @@
+body {
+  background-image: url('/img/gearsBGLight.jpg')
+}
+
 nav {
   width: 23%;
 }
 
 #content {
-  margin-left: 25%;
 }
 
 .game-container {

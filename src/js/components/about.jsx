@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => (
   <div className="w3-display-container game-container">
-    <div className="w3-display-middle">
+    <div className="w3-display-middle w3-card-2 w3-white">
       <h1>About</h1>
       <p>
         I have been part of a <a href="http://www.colorado.edu/ibg/research/human-research-studies/colorado-adoption-project">study</a> since I was born. Every few years we take a series of tests and answer a variety of questions.
