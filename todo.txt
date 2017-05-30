@@ -1,12 +1,14 @@
 games
   ~ n numbers in a row
-  last n numbers in sequence of length n
+  ~ last n numbers in sequence of length n
   color v word
   color, animal, place
 
 x POC - Vanilla JS
 
 Style - framework?
+!local copy of w3.css
+refactor numbers in a row
 
 React
   ? Redux
@@ -25,4 +27,5 @@ tests
 ci
 heroku / aws
 
-favicon
+x favicon
+x background-image
