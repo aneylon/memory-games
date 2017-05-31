@@ -1,7 +1,10 @@
 import React from 'react'
 
 const LastNumbers = () => {
-  let status = 'waiting'
+  let lastNumbers = {
+    status : 'waiting'
+  }
+  let myInterval
 
   function checkAnswer (e) {
     console.log('checking answer')
@@ -11,12 +14,22 @@ const LastNumbers = () => {
   function startStop() {
     let startStopButton = document.getElementById('startStopButton')
 
-    if(status === 'waiting') {
-      status = 'starting'
+    if(lastNumbers.status === 'waiting') {
+      lastNumbers.status = 'starting'
       startStopButton.innerHTML = 'Stop'
+      myInterval = setInterval(() => {
+        console.log('test')
+
+        switch (lastNumbers.status) {
+
+          default:
+            break
+        }
+      }, 500)
     } else {
       startStopButton.innerHTML = 'Start'
-      status = 'waiting'
+      lastNumbers.status = 'waiting'
+      clearInterval(myInterval)
     }
   }
 
