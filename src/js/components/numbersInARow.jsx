@@ -24,7 +24,9 @@ class NumbersInARow extends Component {
           numbersEl.innerHTML = 'Click Start'
           break
         case 'starting':
-          this.state.status = 'building'
+          this.setState({
+            status: 'building'
+          })
           break
         case 'building':
           if (this.state.answer.length < this.state.curMaxLength) {
@@ -32,14 +34,20 @@ class NumbersInARow extends Component {
             setTimeout( () => {
               let newNumber = this.getRandomNumber(9)
               numbersEl.innerHTML = newNumber
-              this.state.answer += newNumber
+              this.setState({
+                answer: this.state.answer += newNumber
+              })
             }, this.state.speed / 2)
           } else {
             if (this.state.curMaxLength < this.state.totalMaxLength) {
-              this.state.curMaxLength += this.getRandomNumber(1)
+              this.setState({
+                curMaxLength: this.state.curMaxLength += this.getRandomNumber(1)
+              })
             }
             numbersEl.innerHTML = 'Enter your answer.'
-            this.state.status = 'asking'
+            this.setState({
+              status: 'asking'
+            })
           }
           break
         case 'asking':
@@ -62,14 +70,15 @@ class NumbersInARow extends Component {
     let startStopButton = document.getElementById('startStopButton')
 
     if (startStopButton.innerHTML === 'Start') {
-      this.state.status = 'starting'
+      this.setState({ status: 'starting' })
       startStopButton.innerHTML = 'Stop'
     } else {
-      this.state.status = 'waiting'
-      this.state.answer = ''
-      this.state.answers.right = 0
-      this.state.answers.wrong = 0
-      this.state.curMaxLength = this.startLength
+      this.setState({
+        status: 'waiting',
+        answer: '',
+        answers: { right: 0, wrong: 0 },
+        curMaxLength: this.state.startLength
+      })
       startStopButton.innerHTML = 'Start'
     }
   }
@@ -83,12 +92,22 @@ class NumbersInARow extends Component {
     answerEl.value = ''
 
     if (myAnswer === this.state.answer) {
-      this.state.answers.right ++
+      let answers = this.state.answers
+      answers.right ++
+      this.setState({
+        answers
+      })
     } else {
-      this.state.answers.wrong ++
+      let answers = this.state.answers
+      answers.wrong ++
+      this.setState({
+        answers
+      })
     }
-    this.state.answer = ''
-    this.state.status = 'starting'
+    this.setState({
+      answer: '',
+      status: 'starting'
+    })
   }
 
   render () {

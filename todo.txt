@@ -9,10 +9,11 @@ x POC - Vanilla JS
 Style - framework?
 !local copy of w3.css
 refactor numbers in a row
+loading spinner?
 
-React
+x React
   ? Redux
-  Router
+  x Router
   ? Form
   + save data
   + user
