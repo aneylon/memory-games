@@ -10,6 +10,7 @@ Style - framework?
 !local copy of w3.css
 refactor numbers in a row
 loading spinner?
+cursor to input on load(etc)
 
 x React
   ? Redux
