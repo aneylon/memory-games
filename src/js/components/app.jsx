@@ -10,6 +10,8 @@ import NumbersInARow from './numbersInARow'
 import LastNumbers from './lastNumbers'
 import ColorVWord from './colorVWord'
 import ColorAnimalPlace from './colorAnimalPlace'
+import 'w3-css/w3.css'
+
 
 class App extends React.Component {
 
