@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aneylon/memory-games.svg?branch=master)](https://travis-ci.org/aneylon/memory-games)
+
 # memory-games
 Simple Games for excising your memory skills.
 
