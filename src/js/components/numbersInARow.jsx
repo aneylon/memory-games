@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import 'w3-css/w3.css'
+import StartStopButton from './startStopButton'
 
 class NumbersInARow extends Component {
   constructor (props) {
@@ -25,6 +26,7 @@ class NumbersInARow extends Component {
           numbersEl.innerHTML = 'Click Start'
           break
         case 'starting':
+          numbersEl.innerHTML = 'Get Ready!'
           this.setState({
             status: 'building'
           })
@@ -125,11 +127,10 @@ class NumbersInARow extends Component {
               placeholder="###"
               id="numberAnswer" />
           </form>
-          <button
-            className="w3-btn w3-blue"
-            onClick={this.startStop}
-            id="startStopButton">Start</button>
-          {/*<div id="results"></div>*/}
+          <StartStopButton
+            classes="w3-btn w3-blue"
+            action={this.startStop}
+            myId="startStopButton" />
         </div>
       </div>
     )

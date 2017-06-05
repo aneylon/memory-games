@@ -5,8 +5,13 @@ const app = express()
 
 const morgan = require('morgan')
 
-const port = process.env.PORT || 8080
 const mode = process.env.MODE
+let port
+if (mode === 'test') {
+  port = 4000
+} else {
+  port = process.env.PORT || 8080
+}
 
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
