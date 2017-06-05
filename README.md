@@ -14,3 +14,9 @@ Styling
 Server
 - [Node](https://nodejs.org)
   -[Express](https://expressjs.com)
+
+## Testing
+Run tests
+```bash
+  npm t(test)
+```

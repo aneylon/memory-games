@@ -6,9 +6,9 @@ games
 
 x POC - Vanilla JS
 
-Style - framework?
-!local copy of w3.css
-refactor numbers in a row
+x Style - framework?
+x local copy of w3.css
+x refactor numbers in a row
 loading spinner?
 cursor to input on load(etc)
 
@@ -26,8 +26,14 @@ x React
   + view data on dashboard
 
 tests
+  front end
+    ? jest
+    ? enzyme
+  ~ back end
+
 ci
-heroku / aws
+
+x heroku / - aws
 
 x favicon
 x background-image
