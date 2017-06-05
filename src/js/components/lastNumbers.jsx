@@ -1,4 +1,5 @@
 import React from 'react'
+import 'w3-css/w3.css'
 
 const LastNumbers = () => {
   let lastNumbers = {
