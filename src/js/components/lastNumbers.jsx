@@ -1,4 +1,5 @@
 import React from 'react'
+import StartStopButton from './startStopButton'
 import 'w3-css/w3.css'
 
 const LastNumbers = () => {
@@ -15,19 +16,14 @@ const LastNumbers = () => {
   let myInterval
 
   function checkAnswer (e) {
-    console.log('checking answer')
     e.preventDefault()
     let answerEl = document.getElementById('answer')
     let myAnswer = answerEl.value
     answerEl.value = ''
-    console.log('answer:', lastNumbers.answer)
-    console.log('my answer:', myAnswer)
 
     if (myAnswer === lastNumbers.answer.slice(-(lastNumbers.answerLength))) {
-      console.log('right')
       lastNumbers.answers.right ++
     } else {
-      console.log('wrong')
       lastNumbers.answers.wrong ++
     }
 
@@ -46,17 +42,14 @@ const LastNumbers = () => {
       lastNumbers.status = 'starting'
       startStopButton.innerHTML = 'Stop'
       myInterval = setInterval(() => {
-        console.log('test')
         switch (lastNumbers.status) {
           case 'waiting':
-            console.log('waiting')
             break
           case 'starting':
-            console.log('starting')
             lastNumbers.status = 'building'
+            displayEl.innerHTML = 'Get Ready!'
             break
           case 'building':
-            console.log('building')
             if (lastNumbers.answer.length < lastNumbers.curMaxLength) {
               displayEl.innerHTML = '&nbsp;'
               setTimeout( () => {
@@ -68,21 +61,20 @@ const LastNumbers = () => {
               if (lastNumbers.curMaxLength < lastNumbers.maxLength) {
                 lastNumbers.curMaxLength += getRandomNumber()
               }
-              displayEl.innerHTML = `What were the last ${lastNumbers.answerLength} numbers?`
+              displayEl.innerHTML = `What were the<br>last ${lastNumbers.answerLength} numbers?`
               lastNumbers.status = 'asking'
             }
             break
           case 'asking':
-            console.log('asking')
             // waiting for answer submission
             // measure time to input answer
             break
           default:
-            console.log('default')
             break
         }
       }, lastNumbers.speed)
     } else {
+      displayEl.innerHTML = 'Stopping...'
       setTimeout( () => {
         startStopButton.innerHTML = 'Start'
         lastNumbers.status = 'waiting'
@@ -108,10 +100,10 @@ const LastNumbers = () => {
             id="answer"
             />
         </form>
-        <button
-          className="w3-btn w3-blue"
-          onClick={startStop}
-          id="startStopButton">Start</button>
+        <StartStopButton
+          classes="w3-btn w3-blue"
+          action={startStop}
+          myId="startStopButton" />
       </div>
     </div>
   )

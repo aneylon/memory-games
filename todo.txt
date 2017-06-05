@@ -9,6 +9,9 @@ x POC - Vanilla JS
 x Style - framework?
 x local copy of w3.css
 x refactor numbers in a row
+show if answer right/wrong
+cursor to input
+'get ready' message
 loading spinner?
 cursor to input on load(etc)
 
