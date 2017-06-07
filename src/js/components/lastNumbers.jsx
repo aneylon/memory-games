@@ -39,6 +39,7 @@ const LastNumbers = () => {
     let displayEl = document.getElementById('messageDisplay')
 
     if(lastNumbers.status === 'waiting') {
+      document.getElementById('answer').focus()
       lastNumbers.status = 'starting'
       startStopButton.innerHTML = 'Stop'
       myInterval = setInterval(() => {

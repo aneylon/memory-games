@@ -1,3 +1,9 @@
+show if answer right/wrong
+loading spinner?
+HotModuleReplacement  vs webpack-livereload-plugin
+https://github.com/statianzo/webpack-livereload-plugin
+https://webpack.js.org/plugins/hot-module-replacement-plugin/
+
 games
   ~ n numbers in a row
   ~ last n numbers in sequence of length n
@@ -9,11 +15,9 @@ x POC - Vanilla JS
 x Style - framework?
 x local copy of w3.css
 x refactor numbers in a row
-show if answer right/wrong
-cursor to input
-'get ready' message
-loading spinner?
-cursor to input on load(etc)
+x 'get ready' message
+x cursor to input
+x cursor to input on load(etc)
 
 x React
   ? Redux
@@ -29,12 +33,13 @@ x React
   + view data on dashboard
 
 tests
-  front end
+  ~ front end
     ? jest
-    ? enzyme
+    ~ enzyme
+      x css / style loader
   ~ back end
 
-ci
+~ ci
 
 x heroku / - aws
 
