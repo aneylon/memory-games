@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import 'w3-css/w3.css'
+import 'w3-css/w3.css'
 import StartStopButton from './startStopButton'
 
 class NumbersInARow extends Component {

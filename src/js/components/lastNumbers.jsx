@@ -1,6 +1,6 @@
 import React from 'react'
 import StartStopButton from './startStopButton'
-// import 'w3-css/w3.css'
+import 'w3-css/w3.css'
 
 const LastNumbers = () => {
   let lastNumbers = {

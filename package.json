@@ -9,8 +9,8 @@
   "scripts": {
     "watch": "webpack --watch",
     "heroku-postbuild": "webpack",
-    "test": "mocha --timeout 10000",
-    "enzyme": "mocha --compilers js:babel-register --require ./test/helpers.js --require ./test/dom.js --recursive"
+    "oldtest": "mocha --timeout 10000",
+    "test": "mocha --compilers js:babel-register --require ignore-styles --require ./test/helpers.js --require ./test/dom.js --recursive"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
@@ -36,6 +36,7 @@
     "chai": "^4.0.1",
     "chai-http": "^3.0.0",
     "enzyme": "^2.8.2",
+    "ignore-styles": "^5.0.1",
     "jsdom": "9.3.0",
     "mocha": "^3.4.2",
     "react-addons-test-utils": "^15.5.1",
