@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import 'w3-css/w3.css'
+// import 'w3-css/w3.css'
 import StartStopButton from './startStopButton'
 
 class NumbersInARow extends Component {
@@ -73,6 +73,7 @@ class NumbersInARow extends Component {
     let startStopButton = document.getElementById('startStopButton')
 
     if (startStopButton.innerHTML === 'Start') {
+      document.getElementById('numberAnswer').focus()
       this.setState({ status: 'starting' })
       startStopButton.innerHTML = 'Stop'
     } else {
