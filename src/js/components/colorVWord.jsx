@@ -10,7 +10,7 @@ class ColorVWord extends Component {
     this.checkAnswer = this.checkAnswer.bind(this)
     this.gameState = {
       speed: 1500,
-      answer: '',
+      answer: [],
       answers: { right: 0, wrong: 0 },
       status: 'waiting',
       startlength: 3,
@@ -18,7 +18,9 @@ class ColorVWord extends Component {
       totalMaxLength: 11,
       questionDisplay: '',
       answerEl: '',
-      startStopButton: ''
+      startStopButton: '',
+      colors: ['red', 'green', 'blue', 'yellow']
+      //Blue Green Red Yellow Pink Purple Orange Black Gray White Brown
     }
   }
 
@@ -34,29 +36,61 @@ class ColorVWord extends Component {
 
   checkAnswer (e) {
     e.preventDefault()
-    console.log('check')
+    let {
+      answerEl,
+      answers } = this.gameState
+    let myAnswer = answerEl.value
+    answerEl.value = ''
+    if (myAnswer === this.gameState.answer) {
+      answers.right ++
+    } else {
+      answers.wrong ++
+    }
+    this.gameState.answer = []
+    this.gameState.status = 'starting'
+  }
+  getRandomNumber (max = 1) {
+    return Math.floor(Math.random() * (max + 1))
   }
 
   startStop () {
-    console.log('start stop')
     if (this.gameState.status === 'waiting') {
       document.getElementById('colorAnswer').focus()
       this.gameState.startStopButton.innerHTML = 'Stop'
       this.gameState.status = 'starting'
       this.gameTimer = setInterval(() => {
-        console.log('tick')
         switch (this.gameState.status) {
           case 'waiting':
             console.log('waiting')
             break
           case 'starting':
             console.log('starting')
+            this.gameState.questionDisplay.innerHTML = 'Get Ready!'
+            this.gameState.status = 'building'
             break
           case 'building':
             console.log('building')
+            if (this.gameState.answer.length < this.gameState.curMaxLength) {
+              this.gameState.questionDisplay.innerHTML = '&nbsp;'
+              let newColor = this.gameState.colors[this.getRandomNumber(this.gameState.colors.length - 1)]
+              let newWord = this.gameState.colors[this.getRandomNumber(this.gameState.colors.length - 1)]
+              this.gameState.answer.push(newColor)
+              console.log(this.gameState.answer)
+              setTimeout(() => {
+                this.gameState.questionDisplay.innerHTML = newColor
+                // show newWord in newColor
+              }, this.gameState.speed)
+            } else {
+              // add to length
+              setTimeout(() => {
+                this.gameState.questionDisplay.innerHTML = `What were the last # colors?`
+              }, this.gameState.speed)
+              this.gameState.status = 'asking'
+            }
             break
           case 'asking':
             console.log('asking')
+            // track length of time to answer?
             break
           default:
             break
@@ -65,8 +99,8 @@ class ColorVWord extends Component {
     } else {
       this.gameState.questionDisplay.innerHTML = 'Stopping...'
       this.gameState.status = 'waiting'
+      this.gameState.answer = []
       this.gameState.startStopButton.innerHTML = 'Start'
-      // reset gameState?
       setTimeout( () => {
         this.gameState.questionDisplay.innerHTML = 'Click Start'
       }, this.gameState.speed / 2)
