@@ -5,10 +5,14 @@ https://github.com/statianzo/webpack-livereload-plugin
 https://webpack.js.org/plugins/hot-module-replacement-plugin/
 
 games
+  ! better timing !
   x n numbers in a row
   x last n numbers in sequence of length n
   ~ color v word
   color, animal, place
+  maths
+    add numbers in a row
+    random problem
 
 x POC - Vanilla JS
 
