@@ -1,7 +1,7 @@
-import React from 'react'
-import { expect } from 'chai'
-import { mount, shallow, render } from 'enzyme'
-import Foo from '../../src/js/components/foo'
+// import React from 'react'
+// import { expect } from 'chai'
+// import { mount, shallow, render } from 'enzyme'
+// import Foo from '../../src/js/components/foo'
 
 // describe('<Foo />', () => {
 //   it('calls componentDidMount', () => {
