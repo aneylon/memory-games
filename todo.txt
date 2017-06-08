@@ -5,9 +5,9 @@ https://github.com/statianzo/webpack-livereload-plugin
 https://webpack.js.org/plugins/hot-module-replacement-plugin/
 
 games
-  ~ n numbers in a row
-  ~ last n numbers in sequence of length n
-  color v word
+  x n numbers in a row
+  x last n numbers in sequence of length n
+  ~ color v word
   color, animal, place
 
 x POC - Vanilla JS
