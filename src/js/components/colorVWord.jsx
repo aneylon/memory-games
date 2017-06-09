@@ -78,12 +78,14 @@ class ColorVWord extends Component {
               console.log(this.gameState.answer)
               setTimeout(() => {
                 this.gameState.questionDisplay.innerHTML = newColor
+                this.gameState.questionDisplay.className = `w3-light-grey w3-text-${newColor}`
                 // show newWord in newColor
               }, this.gameState.speed)
             } else {
               // add to length
               setTimeout(() => {
                 this.gameState.questionDisplay.innerHTML = `What were the last # colors?`
+                this.gameState.questionDisplay.className = `w3-light-grey w3-text-black`
               }, this.gameState.speed)
               this.gameState.status = 'asking'
             }
