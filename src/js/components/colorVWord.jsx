@@ -28,6 +28,7 @@ class ColorVWord extends Component {
     this.gameState.answerEl = document.getElementById('colorAnswer')
     this.gameState.startStopButton = document.getElementById('startStopButton')
     this.gameState.questionDisplay = document.getElementById('questionDisplay')
+    document.getElementById('startStopButton').focus()
   }
 
   componentWillUnmount () {
@@ -41,13 +42,20 @@ class ColorVWord extends Component {
       answers } = this.gameState
     let myAnswer = answerEl.value
     answerEl.value = ''
-    if (myAnswer === this.gameState.answer) {
+    console.log(this.gameState.answer, myAnswer)
+    if (myAnswer === this.gameState.answer.join(' ')) {
+      this.gameState.questionDisplay.innerHTML = 'Right!'
+      this.gameState.questionDisplay.className = 'w3-text-white w3-green'
       answers.right ++
     } else {
+      this.gameState.questionDisplay.innerHTML = 'Wrong!'
+      this.gameState.questionDisplay.className = 'w3-text-white w3-red'
       answers.wrong ++
     }
-    this.gameState.answer = []
-    this.gameState.status = 'starting'
+    setTimeout(() => {
+      this.gameState.answer = []
+      this.gameState.status = 'starting'
+    }, this.gameState.speed)
   }
   getRandomNumber (max = 1) {
     return Math.floor(Math.random() * (max + 1))
@@ -65,6 +73,7 @@ class ColorVWord extends Component {
             break
           case 'starting':
             console.log('starting')
+            this.gameState.questionDisplay.className = 'w3-text-black w3-light-grey'
             this.gameState.questionDisplay.innerHTML = 'Get Ready!'
             this.gameState.status = 'building'
             break
