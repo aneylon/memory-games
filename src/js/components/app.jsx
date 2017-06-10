@@ -4,6 +4,9 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+
+import SignIn from './signIn'
+import SignUp from './signUp'
 import Home from './home'
 import About from './about'
 import NumbersInARow from './numbersInARow'
@@ -48,6 +51,8 @@ class App extends React.Component {
             <Route path="/colorVWord" component={ColorVWord} />
             <Route path="/colorAnimalPlace" component={ColorAnimalPlace} />
             <Route path="/about" component={About} />
+            <Route path="/signIn" component={SignIn} />
+            <Route path="/signUp" component={SignUp} />
           </section>
 
         </div>
