@@ -6,6 +6,7 @@ https://webpack.js.org/plugins/hot-module-replacement-plugin/
 
 games
   ! better timing !
+  abstract base class
   x n numbers in a row
   x last n numbers in sequence of length n
   ~ color v word
