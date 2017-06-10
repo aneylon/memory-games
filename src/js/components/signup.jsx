@@ -6,10 +6,19 @@ const SignUp = () => (
       <h1>
         SignUp
       </h1>
-      <form>
-        <input type='text' placeholder='email'/>
-        <input type='password' placeholder='password'/>
-        <input type='password' placeholder='password'/>
+      <form className='w3-container'>
+        <label>
+          email
+        </label>
+        <input type='text' placeholder='email' className='w3-input' />
+        <label>
+          password
+        </label>
+        <input type='password' placeholder='password' className='w3-input' />
+        <label>
+          verify password
+        </label>
+        <input type='password' placeholder='password' className='w3-input' />
         <button>Sign Up</button>
       </form>
     </div>

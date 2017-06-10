@@ -9,9 +9,15 @@ const SignIn = () => (
       <h1>
         SignIn
       </h1>
-      <form>
-        <input type='text' placeholder='email'/>
-        <input type='password' placeholder='password'/>
+      <form className='w3-container'>
+        <label>
+          email
+        </label>
+        <input type='text' placeholder='email' className='w3-input' />
+        <label>
+          password
+        </label>
+        <input type='password' placeholder='password' className='w3-input' />
         <button>Sign In</button>
       </form>
       <Link to="/signUp">SignUp</Link>
