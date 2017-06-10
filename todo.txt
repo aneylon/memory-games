@@ -1,5 +1,3 @@
-show if answer right/wrong
-loading spinner?
 HotModuleReplacement  vs webpack-livereload-plugin
 https://github.com/statianzo/webpack-livereload-plugin
 https://webpack.js.org/plugins/hot-module-replacement-plugin/
@@ -22,7 +20,10 @@ x local copy of w3.css
 x refactor numbers in a row
 x 'get ready' message
 x cursor to input
-x cursor to input on load(etc)
+x cursor to input on load (etc.)
+x show if answer right/wrong
+x focus on button on load
+x loading spinner?
 
 x React
   ? Redux
