@@ -14,6 +14,10 @@ nav {
   text-align: center;
 }
 
+.content-holder {
+  max-width: 50%;
+}
+
 .game-container * {
   padding: 7px;
   margin: 7px;
