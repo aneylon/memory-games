@@ -7,6 +7,7 @@
   "author": "Arlen Neylon <arlen.m.neylon@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "nodemon --watch server ./server/index.js",
     "watch": "webpack --watch",
     "heroku-postbuild": "webpack",
     "oldtest": "mocha --timeout 10000",
@@ -42,6 +43,7 @@
     "jsdom": "9.3.0",
     "mocha": "^3.4.2",
     "react-addons-test-utils": "^15.5.1",
-    "sinon": "^2.3.2"
+    "sinon": "^2.3.2",
+    "webpack-livereload-plugin": "^0.11.0"
   }
 }
