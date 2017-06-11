@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon --watch server ./server/index.js",
-    "watch": "webpack --watch",
+    "watch": "webpack --config webpack.config.dev.js --watch",
     "heroku-postbuild": "webpack",
     "oldtest": "mocha --timeout 10000",
     "test": "mocha --compilers js:babel-register --require ignore-styles --require ./test/helpers.js --require ./test/dom.js --recursive"
