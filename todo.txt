@@ -26,8 +26,8 @@ x focus on button on load
 x loading spinner?
 
 x React
-  ? Redux
   x Router
+  ? Redux
   ? Form
   + save data
   + user
@@ -37,6 +37,7 @@ x React
       + password
   + save data to server / user acct
   + view data on dashboard
+  ~ Graphs!
 
 tests
   ~ front end

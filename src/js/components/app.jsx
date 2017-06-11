@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
+import User from './user'
 import SignIn from './signIn'
 import SignUp from './signUp'
 import Home from './home'
@@ -53,6 +54,7 @@ class App extends React.Component {
             <Route path="/about" component={About} />
             <Route path="/signIn" component={SignIn} />
             <Route path="/signUp" component={SignUp} />
+            <Route path="/user" component={User} />
           </section>
 
         </div>
