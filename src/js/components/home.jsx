@@ -9,6 +9,9 @@ const Home = () => (
       <p>
         A series of simple games to test and exercise your memory and other skills.
       </p>
+      <p>
+        Sign up or Sign in to track your progress.
+      </p>
     </div>
   </div>
 )
