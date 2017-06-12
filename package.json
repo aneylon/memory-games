@@ -27,8 +27,10 @@
     "react": "^15.5.4",
     "react-chartjs-2": "^2.1.0",
     "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0",
     "style-loader": "^0.18.1",
     "w3-css": "^4.0.4",
     "webpack": "^2.6.1"
