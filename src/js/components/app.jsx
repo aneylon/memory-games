@@ -15,6 +15,8 @@ import NumbersInARow from './numbersInARow'
 import LastNumbers from './lastNumbers'
 import ColorVWord from './colorVWord'
 import ColorAnimalPlace from './colorAnimalPlace'
+import AddNumbers from './addNumbers'
+import RandomMath from './randomMath'
 import 'w3-css/w3.css'
 
 
@@ -38,25 +40,27 @@ class App extends React.Component {
               <span className="w3-bottombar w3-border-black w3-bar-item w3-padding-24 w3-dark-grey">Memory Games</span>
               <button className="w3-bar-item w3-button w3-hide-large" onClick={this.closeSideBar}>Close &times;</button>
               <Link to="/" className="w3-bar-item w3-button">Home</Link>
-              <Link to="/numbersInARow" className="w3-bar-item w3-button">Numbers In A Row</Link>
-              <Link to="/lastNumbers" className="w3-bar-item w3-button">Last Numbers</Link>
-              <Link to="/colorVWord" className="w3-bar-item w3-button">Color vs Word</Link>
-              <Link to="/colorAnimalPlace" className="w3-bar-item w3-button">ColorAnimalPlace</Link>
-              <Link to="/about" className="w3-bar-item w3-button">About</Link>
+              <Link to="/NumbersInARow" className="w3-bar-item w3-button">Numbers In A Row</Link>
+              <Link to="/LastNumbers" className="w3-bar-item w3-button">Last Numbers</Link>
+              <Link to="/ColorVWord" className="w3-bar-item w3-button">Color vs Word</Link>
+              <Link to="/ColorAnimalPlace" className="w3-bar-item w3-button">ColorAnimalPlace</Link>
+              <Link to="/About" className="w3-bar-item w3-button">About</Link>
             </div>
           </nav>
 
           <section id="content">
             <Route exact path="/" component={Home} />
-            <Route path="/numbersInARow" component={NumbersInARow} />
-            <Route path="/lastNumbers" component={LastNumbers} />
-            <Route path="/colorVWord" component={ColorVWord} />
-            <Route path="/colorAnimalPlace" component={ColorAnimalPlace} />
-            <Route path="/about" component={About} />
-            <Route path="/signIn" component={SignIn} />
-            <Route path="/signUp" component={SignUp} />
-            <Route path="/user" component={User} />
-            <Route path="/userInfo" component={UserInfo} />
+            <Route path="/NumbersInARow" component={NumbersInARow} />
+            <Route path="/LastNumbers" component={LastNumbers} />
+            <Route path="/ColorVWord" component={ColorVWord} />
+            <Route path="/ColorAnimalPlace" component={ColorAnimalPlace} />
+            <Route path="/About" component={About} />
+            <Route path="/SignIn" component={SignIn} />
+            <Route path="/SignUp" component={SignUp} />
+            <Route path="/User" component={User} />
+            <Route path="/UserInfo" component={UserInfo} />
+            <Route path="/AddNumbers" component={AddNumbers} />
+            <Route path="/RandomMath" component={RandomMath} />
           </section>
 
         </div>

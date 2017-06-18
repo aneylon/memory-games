@@ -4,7 +4,6 @@ import { mount, shallow, render } from 'enzyme'
 import ColorAnimalPlace from '../../src/js/components/colorAnimalPlace'
 
 describe('<ColorAnimalPlace />', () => {
-  // let colorAnimalPlace = shallow(<ColorAnimalPlace />)
   let colorAnimalPlace = mount(<ColorAnimalPlace />)
 
   it('should render', () => {
