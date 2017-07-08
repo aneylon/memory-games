@@ -5,7 +5,36 @@ module.exports = (express) => {
 
   router.get('/:id', auth, (req, res) => {
     console.log('get user' + req.params.id)
-    res.send({ success: true, message: 'Found user' + req.params.id })
+    // res.send({ success: true, message: 'Found user : ' + req.params.id })
+    res.send({
+      success: true,
+      message: 'Found user : ' + req.params.id,
+      userData: [
+        { nothing: [
+          { id: 1, name: 'one', other: 1 },
+          { id: 2, name: 'two', other: 22 },
+          { id: 3, name: 'three', other: 333 },
+          { id: 4, name: 'four', other: 4444 },
+        ]},
+        {
+          year: [
+          {}
+        ]},
+        {
+          month: [
+          {}
+        ]},
+        {
+          week: [
+          {}
+        ]},
+        {
+          games: [
+            {}
+          ]
+        }
+      ]
+    })
   })
 
   router.post('/signup', (req, res) => {
